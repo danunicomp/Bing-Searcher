@@ -1,0 +1,13 @@
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\bin\Debug\bing.exe.config
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\bin\Debug\bing.exe
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\bin\Debug\bing.pdb
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\obj\Debug\bing.csprojResolveAssemblyReference.cache
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\obj\Debug\bing.Properties.Resources.resources
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\obj\Debug\bing.csproj.GenerateResource.Cache
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\obj\Debug\bing.exe
+c:\users\dshaffer\documents\visual studio 2015\Projects\bing\bing\obj\Debug\bing.pdb
+C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\obj\Debug\bing.frmMain.resources
+C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\bin\Debug\SearchTestList.txt
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Debug\bing.exe.config
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.exe
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.pdb
