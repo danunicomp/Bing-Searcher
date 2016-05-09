@@ -11,3 +11,10 @@ C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\bin\Debug\Sear
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Debug\bing.exe.config
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.exe
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.pdb
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Debug\SearchTestList.txt
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Debug\bing.exe
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Debug\bing.pdb
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.csprojResolveAssemblyReference.cache
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.frmMain.resources
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.Properties.Resources.resources
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Debug\bing.csproj.GenerateResource.Cache

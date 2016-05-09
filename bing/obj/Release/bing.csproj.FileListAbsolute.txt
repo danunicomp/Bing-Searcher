@@ -8,3 +8,13 @@ C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\obj\Release\bi
 C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\obj\Release\bing.csproj.GenerateResource.Cache
 C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\obj\Release\bing.exe
 C:\Users\dshaffer\Documents\Visual Studio 2015\Projects\bing\bing\obj\Release\bing.pdb
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Release\bing.exe.config
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.exe
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.pdb
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Release\SearchTestList.txt
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Release\bing.exe
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\bin\Release\bing.pdb
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.csprojResolveAssemblyReference.cache
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.frmMain.resources
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.Properties.Resources.resources
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.csproj.GenerateResource.Cache

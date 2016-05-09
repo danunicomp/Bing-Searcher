@@ -127,6 +127,11 @@ namespace bing
         {
 
         }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            Console.WriteLine("Hello");
+        }
     }
 
 
