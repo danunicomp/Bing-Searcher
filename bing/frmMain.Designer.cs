@@ -30,13 +30,13 @@
         {
             this.webMain = new System.Windows.Forms.WebBrowser();
             this.txtUrl = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnDoSearch = new System.Windows.Forms.Button();
             this.lblSearchLinesRead = new System.Windows.Forms.Label();
             this.txtSearchTermsRead = new System.Windows.Forms.TextBox();
             this.btnBingDashboard = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbUserAgent = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // webMain
@@ -55,39 +55,11 @@
             this.txtUrl.Size = new System.Drawing.Size(1214, 20);
             this.txtUrl.TabIndex = 1;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(396, 536);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(12, 425);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 7;
-            this.btnStart.Text = "START";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(31, 483);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 76);
-            this.textBox2.TabIndex = 8;
-            // 
             // btnDoSearch
             // 
-            this.btnDoSearch.Location = new System.Drawing.Point(142, 425);
+            this.btnDoSearch.Location = new System.Drawing.Point(6, 16);
             this.btnDoSearch.Name = "btnDoSearch";
-            this.btnDoSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnDoSearch.Size = new System.Drawing.Size(75, 38);
             this.btnDoSearch.TabIndex = 9;
             this.btnDoSearch.Text = "Do Search";
             this.btnDoSearch.UseVisualStyleBackColor = true;
@@ -96,15 +68,16 @@
             // lblSearchLinesRead
             // 
             this.lblSearchLinesRead.AutoSize = true;
-            this.lblSearchLinesRead.Location = new System.Drawing.Point(671, 445);
+            this.lblSearchLinesRead.Location = new System.Drawing.Point(6, 110);
             this.lblSearchLinesRead.Name = "lblSearchLinesRead";
             this.lblSearchLinesRead.Size = new System.Drawing.Size(146, 13);
             this.lblSearchLinesRead.TabIndex = 10;
             this.lblSearchLinesRead.Text = "Lines Read From Search List:";
+            this.lblSearchLinesRead.Click += new System.EventHandler(this.lblSearchLinesRead_Click);
             // 
             // txtSearchTermsRead
             // 
-            this.txtSearchTermsRead.Location = new System.Drawing.Point(821, 441);
+            this.txtSearchTermsRead.Location = new System.Drawing.Point(158, 100);
             this.txtSearchTermsRead.Name = "txtSearchTermsRead";
             this.txtSearchTermsRead.ReadOnly = true;
             this.txtSearchTermsRead.Size = new System.Drawing.Size(49, 20);
@@ -112,7 +85,7 @@
             // 
             // btnBingDashboard
             // 
-            this.btnBingDashboard.Location = new System.Drawing.Point(1150, 424);
+            this.btnBingDashboard.Location = new System.Drawing.Point(89, 16);
             this.btnBingDashboard.Name = "btnBingDashboard";
             this.btnBingDashboard.Size = new System.Drawing.Size(75, 38);
             this.btnBingDashboard.TabIndex = 12;
@@ -120,23 +93,44 @@
             this.btnBingDashboard.UseVisualStyleBackColor = true;
             this.btnBingDashboard.Click += new System.EventHandler(this.btnBingDashboard_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbUserAgent);
+            this.groupBox1.Controls.Add(this.btnDoSearch);
+            this.groupBox1.Controls.Add(this.btnBingDashboard);
+            this.groupBox1.Controls.Add(this.txtSearchTermsRead);
+            this.groupBox1.Controls.Add(this.lblSearchLinesRead);
+            this.groupBox1.Location = new System.Drawing.Point(12, 425);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(283, 134);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // cmbUserAgent
+            // 
+            this.cmbUserAgent.Items.AddRange(new object[] {
+            "Normal",
+            "Mobile"});
+            this.cmbUserAgent.Location = new System.Drawing.Point(9, 61);
+            this.cmbUserAgent.Name = "cmbUserAgent";
+            this.cmbUserAgent.Size = new System.Drawing.Size(121, 21);
+            this.cmbUserAgent.TabIndex = 13;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1238, 571);
-            this.Controls.Add(this.btnBingDashboard);
-            this.Controls.Add(this.txtSearchTermsRead);
-            this.Controls.Add(this.lblSearchLinesRead);
-            this.Controls.Add(this.btnDoSearch);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.webMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bing Searcher";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,13 +140,12 @@
 
         private System.Windows.Forms.WebBrowser webMain;
         private System.Windows.Forms.TextBox txtUrl;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnDoSearch;
         private System.Windows.Forms.Label lblSearchLinesRead;
         private System.Windows.Forms.TextBox txtSearchTermsRead;
         private System.Windows.Forms.Button btnBingDashboard;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbUserAgent;
     }
 }
 

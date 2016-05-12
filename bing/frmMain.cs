@@ -73,8 +73,6 @@ namespace bing
 
         public string DoSearchTerm ()
         {
-
-
             return ("Hello");
         }
 
@@ -113,27 +111,42 @@ namespace bing
             WholeURL = BaseSearchUrl + HttpUtility.UrlEncode(Job.searchitems[RandSearchItem]);
             Console.WriteLine(WholeURL);
             txtUrl.Text = WholeURL;
-            webMain.Navigate(WholeURL);
-
+            if (cmbUserAgent.SelectedIndex == 1)
+            {
+                webMain.Navigate(WholeURL, null, null, "User-Agent:Mozilla/5.0 (Linux; U; Android 2.0; en-us; Droid Build/ESD20) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2");
+                
+            }
+            else
+            {
+                webMain.Navigate(WholeURL);
+            }
+            
         }
 
         private void btnBingDashboard_Click(object sender, EventArgs e)
         {
             
             webMain.Navigate("https://www.bing.com/rewards/dashboard");
+            Console.WriteLine(cmbUserAgent.SelectedIndex);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            this.Resize += new System.EventHandler(this.frmMain_Resize);
+            cmbUserAgent.SelectedIndex = 0;
         }
 
-        private void frmMain_Resize(object sender, EventArgs e)
+        private void frmMain_Resize(object sender, System.EventArgs e)
         {
-            Console.WriteLine("Hello");
+
+            webMain.Width = frmMain.ActiveForm.Width - 40;
+            webMain.Height = frmMain.ActiveForm.Height - 302;
+            Console.WriteLine(frmMain.ActiveForm.Width);
+        }
+
+        private void lblSearchLinesRead_Click(object sender, EventArgs e)
+        {
+
         }
     }
-
-
-
 }
