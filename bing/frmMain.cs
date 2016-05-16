@@ -148,5 +148,21 @@ namespace bing
         {
 
         }
+
+        private void linkJoinBing_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            webMain.Navigate("https://www.bing.com/explore/rewards?PUBL=REFERAFRIEND&CREA=RAW&rrid=_e0a3bea7-391f-c38d-13e8-1401630e4996");
+        }
+
+        private void btnReloadList_Click(object sender, EventArgs e)
+        {
+            Job.ReadSearchList();
+            txtSearchTermsRead.Text = Job.NumberOfSearchItems.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Job.SaveSearchList();
+        }
     }
 }
