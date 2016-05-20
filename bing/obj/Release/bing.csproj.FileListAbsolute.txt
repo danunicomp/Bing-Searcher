@@ -18,3 +18,4 @@ Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.csprojResolveAssemblyReferen
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.frmMain.resources
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.Properties.Resources.resources
 Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.csproj.GenerateResource.Cache
+Z:\CLOUD\GITHUB\Bing-Searcher\bing\obj\Release\bing.frmManageSearchList.resources

@@ -47,9 +47,9 @@ namespace bing
         private void btnStart_Click(object sender, EventArgs e)
         {
 
-            string BaseSearchUrl = "http://www.bing.com/search?q=";
-            string searchphrase;
-            string line;
+           // string BaseSearchUrl = "http://www.bing.com/search?q=";
+           // string searchphrase;
+           // string line;
             int RandSearchItem;
 
 
@@ -163,6 +163,14 @@ namespace bing
         private void button1_Click(object sender, EventArgs e)
         {
             Job.SaveSearchList();
+        }
+
+        private void btnSearchList_Click(object sender, EventArgs e)
+        {
+            frmManageSearchList form2 = new frmManageSearchList();
+            form2.ShowDialog();
+            Job.ReadSearchList();
+            txtSearchTermsRead.Text = Job.NumberOfSearchItems.ToString();
         }
     }
 }
