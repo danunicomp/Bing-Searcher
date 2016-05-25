@@ -132,17 +132,11 @@ namespace bing
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.Resize += new System.EventHandler(this.frmMain_Resize);
+        
             cmbUserAgent.SelectedIndex = 0;
         }
 
-        private void frmMain_Resize(object sender, System.EventArgs e)
-        {
 
-            webMain.Width = frmMain.ActiveForm.Width - 40;
-            webMain.Height = frmMain.ActiveForm.Height - 302;
-            Console.WriteLine(frmMain.ActiveForm.Width);
-        }
 
         private void lblSearchLinesRead_Click(object sender, EventArgs e)
         {
