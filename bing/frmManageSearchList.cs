@@ -88,15 +88,31 @@ namespace bing
 
             LinesToAdd.Clear();
 
-            foreach(string newline in tboxAddToSearch.Lines)
+            foreach(string newline in lstSearchList.Items)
             {
-                NewLine = cmbCatagory.Text + newline;
-                LinesToAdd.Add(NewLine);
+                LinesToAdd.Add(newline);
             }
 
-            //LinesToAdd = tboxAddToSearch.Lines.Cast<string>;
+            foreach (string newline in tboxAddToSearch.Lines)
+            {
+                if (newline.Length != 0) { 
+                    if (cmbCatagory.Text.Length != 0)
+                    {
+                        NewLine = cmbCatagory.Text + " " + newline;
+                    }
+                    else
+                    {
+                        NewLine = newline;
+                    }
+                    LinesToAdd.Add(NewLine);
+                }
+            }
 
-            DisplayList1.AddRange(tboxAddToSearch.Lines);
+      //      DisplayList1.AddRange(tboxAddToSearch.Lines);
+            SearchList.WriteSeachList(LinesToAdd);
+
+            this.RefreshDisplay();
+            /*
 
             lstSearchList.Items.Clear();
             foreach (string line in DisplayList1)
@@ -106,11 +122,12 @@ namespace bing
 
             }
             lstSearchList.Refresh();
-
+            */
         }
 
         private void RefreshDisplay()
         {
+            lstSearchList.Items.Clear();
             foreach (string line in SearchList.searchitems)
             {
                 lstSearchList.Items.Add(line);

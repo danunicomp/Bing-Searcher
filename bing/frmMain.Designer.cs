@@ -35,13 +35,14 @@
             this.txtSearchTermsRead = new System.Windows.Forms.TextBox();
             this.btnBingDashboard = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearchList = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.linkJoinBing = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnReloadList = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbUserAgent = new System.Windows.Forms.ComboBox();
-            this.btnSearchList = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +117,16 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
+            // btnSearchList
+            // 
+            this.btnSearchList.Location = new System.Drawing.Point(9, 290);
+            this.btnSearchList.Name = "btnSearchList";
+            this.btnSearchList.Size = new System.Drawing.Size(103, 24);
+            this.btnSearchList.TabIndex = 19;
+            this.btnSearchList.Text = "Manage Search";
+            this.btnSearchList.UseVisualStyleBackColor = true;
+            this.btnSearchList.Click += new System.EventHandler(this.btnSearchList_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(14, 250);
@@ -178,21 +189,21 @@
             this.cmbUserAgent.Size = new System.Drawing.Size(121, 21);
             this.cmbUserAgent.TabIndex = 13;
             // 
-            // btnSearchList
+            // lblInfo
             // 
-            this.btnSearchList.Location = new System.Drawing.Point(9, 290);
-            this.btnSearchList.Name = "btnSearchList";
-            this.btnSearchList.Size = new System.Drawing.Size(103, 24);
-            this.btnSearchList.TabIndex = 19;
-            this.btnSearchList.Text = "Manage Search";
-            this.btnSearchList.UseVisualStyleBackColor = true;
-            this.btnSearchList.Click += new System.EventHandler(this.btnSearchList_Click);
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(12, 424);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblInfo.TabIndex = 14;
+            this.lblInfo.Text = "label2";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1238, 425);
+            this.ClientSize = new System.Drawing.Size(1238, 446);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.webMain);
@@ -226,6 +237,7 @@
         private System.Windows.Forms.Button btnReloadList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSearchList;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 

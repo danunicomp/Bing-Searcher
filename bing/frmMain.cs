@@ -15,8 +15,13 @@ using System.IO;
 namespace bing
 {
 
+    
     public partial class frmMain : Form
     {
+
+        const String Version = "0.9a";
+        const String DateModified = "May 31, 2016";
+
         SearchItem Job = new SearchItem();
         public frmMain()
         {
@@ -132,7 +137,7 @@ namespace bing
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-        
+            lblInfo.Text = "Bing Searcher - Version " + Version + " Modified: " + DateModified;
             cmbUserAgent.SelectedIndex = 0;
         }
 
