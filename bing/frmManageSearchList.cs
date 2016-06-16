@@ -13,6 +13,7 @@ namespace bing
 {
     public partial class frmManageSearchList : Form
     {
+        public Boolean HasChanged = false;
 
         clsSearch SearchList = new clsSearch();
         StringCollection DisplayList1 = new StringCollection();
@@ -23,15 +24,10 @@ namespace bing
             InitializeComponent();
         }
 
-        private void frmManageSearchList_Load(object sender, EventArgs e)
-        {
-            
-            SearchList.ReadSearchList(1);
 
-            //            for (int x=0; x< SearchList.searchitems.Count;++x)
-            //            {
-            //               
-            //            }
+        private void frmManageSearchList_Load(object sender, EventArgs e)
+        {            
+            SearchList.ReadSearchList(1);
 
             this.RefreshDisplay();
 
@@ -40,11 +36,8 @@ namespace bing
                 DisplayList1.Add(line.ToString());
                 //Console.WriteLine(line);
             }
-
+            lblNumberOfLines.Text = lstSearchList.Items.Count.ToString();
         }
-
-
-       
 
         private void btnCloseManageSearch_Click(object sender, EventArgs e)
         {
@@ -53,7 +46,7 @@ namespace bing
 
         private void btnDeleteLine_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(lstSearchList.SelectedIndex);
+           // Console.WriteLine(lstSearchList.SelectedIndex);
             int LineToDelete;
            // List<String> DisplayList;
 
@@ -65,7 +58,7 @@ namespace bing
                 LineToDelete = lstSearchList.Items.Count-1;
             }
             lstSearchList.SelectedIndex = LineToDelete;
-
+            HasChanged = true;
         }
         
         private void btnSaveList_Click(object sender, EventArgs e)
@@ -76,10 +69,10 @@ namespace bing
             foreach (string line in lstSearchList.Items)
             {
                 DisplayList1.Add(line.ToString());
-                //Console.WriteLine(line);
             }
 
             SearchList.WriteSeachList(DisplayList1);
+            HasChanged = false;
         }
 
         private void btnAddToSearch_Click(object sender, EventArgs e)
@@ -95,7 +88,8 @@ namespace bing
 
             foreach (string newline in tboxAddToSearch.Lines)
             {
-                if (newline.Length != 0) { 
+//                Console.WriteLine("Word Count: " + this.NumberOfWords(newline));
+                if (newline.Length != 0 && this.NumberOfWords(newline) >= 1) { 
                     if (cmbCatagory.Text.Length != 0)
                     {
                         NewLine = cmbCatagory.Text + " " + newline;
@@ -112,22 +106,23 @@ namespace bing
             SearchList.WriteSeachList(LinesToAdd);
 
             this.RefreshDisplay();
-            /*
+        }
 
-            lstSearchList.Items.Clear();
-            foreach (string line in DisplayList1)
-            {
-                
-                lstSearchList.Items.Add(line);
+        private int NumberOfWords(string Line)
+        {
+            int WordCount = 0;
+            Line = Line.Trim();
+            Line = Line.TrimStart();
+            Line = Line.TrimEnd();
+            WordCount = Line.Trim().Split(' ').Count();
 
-            }
-            lstSearchList.Refresh();
-            */
+            return (WordCount);
         }
 
         private void RefreshDisplay()
         {
             lstSearchList.Items.Clear();
+            SearchList.ReadSearchList();
             foreach (string line in SearchList.searchitems)
             {
                 lstSearchList.Items.Add(line);

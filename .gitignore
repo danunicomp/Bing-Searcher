@@ -2,3 +2,7 @@
 *.Cache
 *.suo
 *.rar
+*.exe
+bing/obj/Release/bing.csproj.GenerateResource.Cache
+*.cache
+*.exe

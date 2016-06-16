@@ -37,6 +37,8 @@
             this.btnDeleteLine = new System.Windows.Forms.Button();
             this.btnSaveList = new System.Windows.Forms.Button();
             this.tboxAddToSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNumberOfLines = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstSearchList
@@ -121,11 +123,32 @@
             this.tboxAddToSearch.Size = new System.Drawing.Size(258, 113);
             this.tboxAddToSearch.TabIndex = 9;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(540, 266);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Number of Lines:";
+            // 
+            // lblNumberOfLines
+            // 
+            this.lblNumberOfLines.AutoSize = true;
+            this.lblNumberOfLines.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfLines.Location = new System.Drawing.Point(633, 262);
+            this.lblNumberOfLines.Name = "lblNumberOfLines";
+            this.lblNumberOfLines.Size = new System.Drawing.Size(19, 20);
+            this.lblNumberOfLines.TabIndex = 11;
+            this.lblNumberOfLines.Text = "0";
+            // 
             // frmManageSearchList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 433);
+            this.Controls.Add(this.lblNumberOfLines);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tboxAddToSearch);
             this.Controls.Add(this.btnSaveList);
             this.Controls.Add(this.btnDeleteLine);
@@ -155,5 +178,7 @@
         private System.Windows.Forms.Button btnDeleteLine;
         private System.Windows.Forms.Button btnSaveList;
         private System.Windows.Forms.TextBox tboxAddToSearch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNumberOfLines;
     }
 }
