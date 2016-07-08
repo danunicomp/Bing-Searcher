@@ -81,7 +81,6 @@
             this.lblSearchLinesRead.Size = new System.Drawing.Size(120, 13);
             this.lblSearchLinesRead.TabIndex = 10;
             this.lblSearchLinesRead.Text = "Lines Read Search List:";
-            this.lblSearchLinesRead.Click += new System.EventHandler(this.lblSearchLinesRead_Click);
             // 
             // txtSearchTermsRead
             // 

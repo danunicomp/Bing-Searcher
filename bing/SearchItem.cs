@@ -30,6 +30,7 @@ namespace bing
         {
             string line;
             this.NumberOfSearchItems = 0;
+            this.searchitems.Clear();
             StreamReader sr = new StreamReader("SearchTestList.txt");
             while ((line = sr.ReadLine()) != null)
             {

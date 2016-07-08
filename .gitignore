@@ -6,3 +6,5 @@
 bing/obj/Release/bing.csproj.GenerateResource.Cache
 *.cache
 *.exe
+*.Cache
+*.cache

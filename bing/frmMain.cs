@@ -14,13 +14,11 @@ using System.IO;
 
 namespace bing
 {
-
-    
     public partial class frmMain : Form
     {
 
-        const String Version = "0.9a";
-        const String DateModified = "May 31, 2016";
+        const String Version = "0.9b";
+        const String DateModified = "July 8, 2016";
 
         SearchItem Job = new SearchItem();
         public frmMain()
@@ -66,19 +64,6 @@ namespace bing
 
             // Open the text file using a stream reader.
 
-/*
-
-            Console.WriteLine("searching for " + line);
-                searchphrase = SearchUrl + HttpUtility.UrlEncode(line);
-                Console.WriteLine("URL = " + searchphrase);
-                webMain.Navigate(searchphrase);
-*/
-
-        }
-
-        public string DoSearchTerm ()
-        {
-            return ("Hello");
         }
 
         public async Task PageLoad(int TimeOut)
@@ -129,8 +114,7 @@ namespace bing
         }
 
         private void btnBingDashboard_Click(object sender, EventArgs e)
-        {
-            
+        {            
             webMain.Navigate("https://www.bing.com/rewards/dashboard");
             Console.WriteLine(cmbUserAgent.SelectedIndex);
         }
@@ -141,12 +125,6 @@ namespace bing
             cmbUserAgent.SelectedIndex = 0;
         }
 
-
-
-        private void lblSearchLinesRead_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void linkJoinBing_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
