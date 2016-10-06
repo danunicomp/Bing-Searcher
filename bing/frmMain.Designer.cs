@@ -36,7 +36,6 @@
             this.btnBingDashboard = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearchList = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.linkJoinBing = new System.Windows.Forms.LinkLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnReloadList = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.webMain.Location = new System.Drawing.Point(12, 12);
             this.webMain.MinimumSize = new System.Drawing.Size(20, 20);
             this.webMain.Name = "webMain";
+            this.webMain.ScriptErrorsSuppressed = true;
             this.webMain.Size = new System.Drawing.Size(1061, 381);
             this.webMain.TabIndex = 0;
             this.webMain.Url = new System.Uri("http://bing.com", System.UriKind.Absolute);
@@ -103,7 +103,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnSearchList);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.linkJoinBing);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label1);
@@ -118,23 +117,13 @@
             // 
             // btnSearchList
             // 
-            this.btnSearchList.Location = new System.Drawing.Point(9, 290);
+            this.btnSearchList.Location = new System.Drawing.Point(14, 329);
             this.btnSearchList.Name = "btnSearchList";
-            this.btnSearchList.Size = new System.Drawing.Size(103, 24);
+            this.btnSearchList.Size = new System.Drawing.Size(107, 24);
             this.btnSearchList.TabIndex = 19;
             this.btnSearchList.Text = "Manage Search";
             this.btnSearchList.UseVisualStyleBackColor = true;
             this.btnSearchList.Click += new System.EventHandler(this.btnSearchList_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(14, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkJoinBing
             // 
@@ -234,7 +223,6 @@
         private System.Windows.Forms.LinkLabel linkJoinBing;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReloadList;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSearchList;
         private System.Windows.Forms.Label lblInfo;
     }

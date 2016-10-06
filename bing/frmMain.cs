@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
 using System.Web;
-using System.IO;
 
 
 namespace bing
@@ -17,8 +9,8 @@ namespace bing
     public partial class frmMain : Form
     {
 
-        const String Version = "0.9b";
-        const String DateModified = "July 8, 2016";
+        const String Version = "0.9c";
+        const String DateModified = "October 4th, 2016";
 
         SearchItem Job = new SearchItem();
         public frmMain()
@@ -26,24 +18,6 @@ namespace bing
             InitializeComponent();
             Job.ReadSearchList();
             txtSearchTermsRead.Text = Job.NumberOfSearchItems.ToString();
-        }
-
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //Uri uri = new Uri("something in the way");
-            Console.WriteLine(System.Web.HttpUtility.UrlEncode("something in the way's"));
-
-            Job.ReadSearchList();
-
-            
-
-            foreach (string s in Job.searchitems)
-            {
-                Console.WriteLine(s);
-            }
-            Console.WriteLine(Job.NumberOfSearchItems);
-           
         }
 
 
@@ -137,10 +111,7 @@ namespace bing
             txtSearchTermsRead.Text = Job.NumberOfSearchItems.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Job.SaveSearchList();
-        }
+
 
         private void btnSearchList_Click(object sender, EventArgs e)
         {
