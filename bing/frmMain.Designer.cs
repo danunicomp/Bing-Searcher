@@ -42,6 +42,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbUserAgent = new System.Windows.Forms.ComboBox();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.btnAutoSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +104,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnAutoSearch);
             this.groupBox1.Controls.Add(this.btnSearchList);
             this.groupBox1.Controls.Add(this.linkJoinBing);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -114,6 +118,7 @@
             this.groupBox1.Size = new System.Drawing.Size(147, 381);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "            ";
             // 
             // btnSearchList
             // 
@@ -186,6 +191,26 @@
             this.lblInfo.TabIndex = 14;
             this.lblInfo.Text = "label2";
             // 
+            // btnAutoSearch
+            // 
+            this.btnAutoSearch.Location = new System.Drawing.Point(17, 241);
+            this.btnAutoSearch.Name = "btnAutoSearch";
+            this.btnAutoSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnAutoSearch.TabIndex = 20;
+            this.btnAutoSearch.Text = "Auto Search";
+            this.btnAutoSearch.UseVisualStyleBackColor = true;
+            this.btnAutoSearch.Click += new System.EventHandler(this.btnAutoSearch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +250,8 @@
         private System.Windows.Forms.Button btnReloadList;
         private System.Windows.Forms.Button btnSearchList;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnAutoSearch;
+        private System.Windows.Forms.Label label2;
     }
 }
 

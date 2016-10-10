@@ -9,8 +9,8 @@ namespace bing
     public partial class frmMain : Form
     {
 
-        const String Version = "0.9c";
-        const String DateModified = "October 4th, 2016";
+        const String Version = "0.9d";
+        const String DateModified = "October 6th, 2016";
 
         SearchItem Job = new SearchItem();
         public frmMain()
@@ -67,6 +67,29 @@ namespace bing
 
         private void btnDoSearch_Click(object sender, EventArgs e)
         {
+            DoSearch();   
+        }
+
+        private void btnAutoSearch_Click(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 3; i++)
+            {
+                int pauseTime = 10000;
+
+                DoSearch();
+                // System.Threading.Thread.Sleep(pauseTime);
+                label2.Text = "Number of Searches: " + i;
+               
+                webMain.Refresh();
+                this.Refresh();
+                DoSearch();
+                System.Threading.Thread.Sleep(pauseTime);
+            }
+
+        }
+
+        private void DoSearch()
+        {
             string BaseSearchUrl = "http://www.bing.com/search?q=";
             string WholeURL;
             Random r = new Random();
@@ -78,13 +101,12 @@ namespace bing
             if (cmbUserAgent.SelectedIndex == 1)
             {
                 webMain.Navigate(WholeURL, null, null, "User-Agent:Mozilla/5.0 (Linux; U; Android 2.0; en-us; Droid Build/ESD20) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2");
-                
+
             }
             else
             {
                 webMain.Navigate(WholeURL);
             }
-            
         }
 
         private void btnBingDashboard_Click(object sender, EventArgs e)
@@ -119,6 +141,11 @@ namespace bing
             form2.ShowDialog();
             Job.ReadSearchList();
             txtSearchTermsRead.Text = Job.NumberOfSearchItems.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
